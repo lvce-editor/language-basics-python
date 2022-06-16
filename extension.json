@@ -1,0 +1,13 @@
+{
+  "id": "builtin.language-basics-python",
+  "name": "Language Basics Python",
+  "description": "Provides syntax highlighting and bracket matching in Python files.",
+  "languages": [
+    {
+      "id": "python",
+      "extensions": [".py"],
+      "configuration": "./languageConfiguration.json",
+      "tokenize": "src/tokenizePython.js"
+    }
+  ]
+}
