@@ -1,0 +1,1 @@
+while file_text != file_finish:
