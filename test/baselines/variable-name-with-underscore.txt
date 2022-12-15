@@ -1,4 +1,4 @@
 Keyword
 Whitespace
-VariableName
+Function
 Punctuation
