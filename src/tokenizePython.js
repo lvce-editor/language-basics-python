@@ -40,6 +40,7 @@ export const TokenType = {
   LanguageConstant: 953,
   KeywordReturn: 954,
   KeywordImport: 955,
+  KeywordControl: 956,
 }
 
 export const TokenMap = {
@@ -61,6 +62,7 @@ export const TokenMap = {
   [TokenType.LanguageConstant]: 'LanguageConstant',
   [TokenType.KeywordReturn]: 'KeywordReturn',
   [TokenType.KeywordImport]: 'KeywordImport',
+  [TokenType.KeywordControl]: 'KeywordControl',
 }
 
 const RE_WHITESPACE = /^\s+/
@@ -142,6 +144,14 @@ export const tokenizeLine = (line, lineState) => {
             case 'from':
             case 'import':
               token = TokenType.KeywordImport
+              break
+            case 'if':
+            case 'elif':
+            case 'else':
+            case 'try':
+            case 'catch':
+            case 'finally':
+              token = TokenType.KeywordControl
               break
             default:
               token = TokenType.Keyword
