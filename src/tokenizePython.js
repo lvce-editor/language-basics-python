@@ -37,6 +37,9 @@ export const TokenType = {
   NewLine: 771,
   Keyword: 951,
   VariableName: 952,
+  LanguageConstant: 953,
+  KeywordReturn: 954,
+  KeywordImport: 955,
 }
 
 export const TokenMap = {
@@ -55,6 +58,9 @@ export const TokenMap = {
   [TokenType.NewLine]: 'NewLine',
   [TokenType.Keyword]: 'Keyword',
   [TokenType.VariableName]: 'VariableName',
+  [TokenType.LanguageConstant]: 'LanguageConstant',
+  [TokenType.KeywordReturn]: 'KeywordReturn',
+  [TokenType.KeywordImport]: 'KeywordImport',
 }
 
 const RE_WHITESPACE = /^\s+/
@@ -124,7 +130,23 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.Whitespace
           state = State.TopLevelContent
         } else if ((next = part.match(RE_KEYWORD))) {
-          token = TokenType.Keyword
+          switch (next[0]) {
+            case 'True':
+            case 'False':
+            case 'None':
+              token = TokenType.LanguageConstant
+              break
+            case 'return':
+              token = TokenType.KeywordReturn
+              break
+            case 'from':
+            case 'import':
+              token = TokenType.KeywordImport
+              break
+            default:
+              token = TokenType.Keyword
+              break
+          }
           state = State.TopLevelContent
         } else if ((next = part.match(RE_VARIABLE_NAME))) {
           token = TokenType.VariableName
