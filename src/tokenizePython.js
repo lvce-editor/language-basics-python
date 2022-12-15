@@ -41,6 +41,7 @@ export const TokenType = {
   KeywordReturn: 954,
   KeywordImport: 955,
   KeywordControl: 956,
+  Function: 957,
 }
 
 export const TokenMap = {
@@ -63,6 +64,7 @@ export const TokenMap = {
   [TokenType.KeywordReturn]: 'KeywordReturn',
   [TokenType.KeywordImport]: 'KeywordImport',
   [TokenType.KeywordControl]: 'KeywordControl',
+  [TokenType.Function]: 'Function',
 }
 
 const RE_WHITESPACE = /^\s+/
@@ -105,12 +107,13 @@ const RE_OPERATOR = /^(\+|\-|\*|\/)/
 const RE_NUMERIC =
   /^((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b/
 const RE_PUNCTUATION = /^[\(\)\{\}:,\+\-\*&=\/\\\[\]!\.<>%]+/
+const RE_FUNCTION_CALL_NAME = /^[\w]+(?=\s*\()/
 
 export const initialLineState = {
   state: State.TopLevelContent,
 }
 
-// TODO maybe reverse order of parameters -> line, context (context may be optional)
+export const hasArrayReturn = true
 
 /**
  *
@@ -157,6 +160,9 @@ export const tokenizeLine = (line, lineState) => {
               token = TokenType.Keyword
               break
           }
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_FUNCTION_CALL_NAME))) {
+          token = TokenType.Function
           state = State.TopLevelContent
         } else if ((next = part.match(RE_VARIABLE_NAME))) {
           token = TokenType.VariableName
@@ -218,11 +224,9 @@ export const tokenizeLine = (line, lineState) => {
         state
         throw new Error('no')
     }
-    index += next[0].length
-    tokens.push({
-      type: token,
-      length: next[0].length,
-    })
+    const tokenLength = next[0].length
+    index += tokenLength
+    tokens.push(token, tokenLength)
   }
   return {
     state,
