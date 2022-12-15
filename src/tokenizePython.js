@@ -70,40 +70,14 @@ export const TokenMap = {
 const RE_WHITESPACE = /^\s+/
 const RE_DOUBLE_QUOTE = /^"/
 const RE_SINGLE_QUOTE = /^'/
-const RE_ANGLE_BRACKET_OPEN = /^<(?!\s)/
-const RE_ANGLE_BRACKET_CLOSE = /^>/
-const RE_TAGNAME = /^[!\w]+/
 const RE_TEXT = /^.+/
 const RE_ANY_TEXT = /^[^\n]+/
-const RE_SLASH = /^\//
-const RE_ATTRIBUTE_NAME = /^[a-zA-Z\d\-]+/
-const RE_EQUAL_SIGN = /^=/
 const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"]+/
 const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^']+/
-const RE_PUNCTUATION_SELF_CLOSING = /^\/>/
-const RE_INVALID_INSIDE_OPENING_TAG = /^[^a-zA-Z>]/
-const RE_INVALID_INSIDE_ClOSING_TAG = /^[^a-zA-Z>]/
-const RE_NOT_TAGNAME = /^[^a-zA-Z\d]+/
-const RE_WORD = /^[^\s]+/
-const RE_ANGLE_BRACKET_ONLY = /^</
-const RE_NEWLINE = /^\n/
-const RE_EXCLAMATION_MARK = /^!/
-const RE_SELF_CLOSING = /^\/>/
-const RE_DASH_DASH = /^\-\-/
-const RE_TAG_TEXT = /^[^\s>]+/
 const RE_LINE_COMMENT = /^#/
-const RE_NEWLINE_WHITESPACE = /^\n\s*/
-const RE_BLOCK_COMMENT_START = /^\/\*/
-const RE_BLOCK_COMMENT_CONTENT = /^.+(?=\*\/)/s
-const RE_BLOCK_COMMENT_END = /^\*\//
-const RE_UNKNOWN_VALUE = /^[^\}\{\s,"]+/
 const RE_KEYWORD =
   /^(?:__debug__|Ellipsis|yield|with|while|try|true|True|return|raise|pass|or|NotImplemented|not|nonlocal|None|lambda|is|in|import|if|global|from|for|finally|False|false|except|else|elif|del|def|continue|class|break|await|async|assert|as|and)\b/
-const RE_FUNCTION_NAME = /^[a-zA-Z\d]+/
-const RE_ROUND_OPEN = /^\(/
 const RE_VARIABLE_NAME = /^[_a-zA-Z][a-zA-Z\d_]*/
-const RE_ROUND_CLOSE = /^\)/
-const RE_OPERATOR = /^(\+|\-|\*|\/)/
 const RE_NUMERIC =
   /^((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b/
 const RE_PUNCTUATION = /^[\(\)\{\}:,\+\-\*&=\/\\\[\]!\.<>%]+/
@@ -233,5 +207,3 @@ export const tokenizeLine = (line, lineState) => {
     tokens,
   }
 }
-
-// tokenizeLine(initialContext, `def add(a,b):`) //?
