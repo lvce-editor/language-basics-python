@@ -128,6 +128,8 @@ export const tokenizeLine = (line, lineState) => {
             case 'try':
             case 'catch':
             case 'finally':
+            case 'while':
+            case 'for':
               token = TokenType.KeywordControl
               break
             default:
