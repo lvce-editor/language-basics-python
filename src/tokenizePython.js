@@ -131,6 +131,12 @@ export const tokenizeLine = (line, lineState) => {
             case 'finally':
             case 'while':
             case 'for':
+            case 'continue':
+            case 'not':
+            case 'except':
+            case 'with':
+            case 'as':
+            case 'raise':
               token = TokenType.KeywordControl
               break
             default:
