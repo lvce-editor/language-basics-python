@@ -82,6 +82,7 @@ const RE_NUMERIC =
   /^((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b/
 const RE_PUNCTUATION = /^[\(\)\{\}:,\+\-\*&=\/\\\[\]!\.<>%]+/
 const RE_FUNCTION_CALL_NAME = /^[\w]+(?=\s*\()/
+const RE_DECORATOR = /^@[\w]+/
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -158,6 +159,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_LINE_COMMENT))) {
           token = TokenType.Comment
           state = State.InsideLineComment
+        } else if ((next = part.match(RE_DECORATOR))) {
+          token = TokenType.VariableName
+          state = State.TopLevelContent
         } else if ((next = part.match(RE_TEXT))) {
           token = TokenType.Text
           state = State.TopLevelContent
