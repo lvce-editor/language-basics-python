@@ -17,6 +17,7 @@ export const State = {
   InsideLineComment: 12,
   InsideSingleQuoteString: 13,
   InsideTripleDoubleQuoteString: 14,
+  InsideTripleSingleQuoteString: 15,
 }
 
 /**
@@ -89,6 +90,7 @@ const RE_DECORATOR = /^@[\w]+/
 const RE_TRIPLE_QUOTED_STRING_CONTENT_1 = /.*(?=""")/s
 const RE_TRIPLE_QUOTED_STRING_CONTENT_2 = /.*/s
 const RE_STRING_ESCAPE = /^\\./
+const RE_TRIPLE_SINGLE_QUOTE = /^'{3}/
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -166,6 +168,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_TRIPLE_DOUBLE_QUOTE))) {
           token = TokenType.Punctuation
           state = State.InsideTripleDoubleQuoteString
+        } else if ((next = part.match(RE_TRIPLE_SINGLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = State.InsideTripleSingleQuoteString
         } else if ((next = part.match(RE_DOUBLE_QUOTE))) {
           token = TokenType.PunctuationString
           state = State.InsideDoubleQuoteString
@@ -224,6 +229,20 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_TRIPLE_QUOTED_STRING_CONTENT_2))) {
           token = TokenType.String
           state = State.InsideTripleDoubleQuoteString
+        } else {
+          throw new Error('no')
+        }
+        break
+      case State.InsideTripleSingleQuoteString:
+        if ((next = part.match(RE_TRIPLE_SINGLE_QUOTE))) {
+          token = TokenType.Punctuation
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_TRIPLE_QUOTED_STRING_CONTENT_1))) {
+          token = TokenType.String
+          state = State.InsideTripleSingleQuoteString
+        } else if ((next = part.match(RE_TRIPLE_QUOTED_STRING_CONTENT_2))) {
+          token = TokenType.String
+          state = State.InsideTripleSingleQuoteString
         } else {
           throw new Error('no')
         }
