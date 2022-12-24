@@ -143,6 +143,7 @@ export const tokenizeLine = (line, lineState) => {
             case 'with':
             case 'as':
             case 'raise':
+            case 'break':
               token = TokenType.KeywordControl
               break
             default:
