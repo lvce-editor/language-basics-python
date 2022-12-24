@@ -74,8 +74,8 @@ const RE_TRIPLE_DOUBLE_QUOTE = /^"{3}/
 const RE_SINGLE_QUOTE = /^'/
 const RE_TEXT = /^.+/
 const RE_ANY_TEXT = /^[^\n]+/
-const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"]+/
-const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^']+/
+const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"\\]+/
+const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^'\\]+/
 const RE_STRING_TRIPLE_DOUBLE_QUOTE_CONTENT = /^.+(?=""")/
 const RE_LINE_COMMENT = /^#/
 const RE_KEYWORD =
@@ -88,6 +88,7 @@ const RE_FUNCTION_CALL_NAME = /^[\w]+(?=\s*\()/
 const RE_DECORATOR = /^@[\w]+/
 const RE_TRIPLE_QUOTED_STRING_CONTENT_1 = /.*(?=""")/s
 const RE_TRIPLE_QUOTED_STRING_CONTENT_2 = /.*/s
+const RE_STRING_ESCAPE = /^\\./
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -191,6 +192,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_DOUBLE_QUOTE))) {
           token = TokenType.PunctuationString
           state = State.TopLevelContent
+        } else if ((next = part.match(RE_STRING_ESCAPE))) {
+          token = TokenType.String
+          state = State.InsideDoubleQuoteString
         } else {
           throw new Error('no')
         }
@@ -202,6 +206,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_SINGLE_QUOTE))) {
           token = TokenType.PunctuationString
           state = State.TopLevelContent
+        } else if ((next = part.match(RE_STRING_ESCAPE))) {
+          token = TokenType.String
+          state = State.InsideSingleQuoteString
         } else {
           throw new Error('no')
         }
