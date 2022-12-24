@@ -1,0 +1,7 @@
+VariableName
+Punctuation
+PunctuationString
+String
+String
+String
+PunctuationString
