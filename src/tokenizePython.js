@@ -92,6 +92,7 @@ const RE_TRIPLE_QUOTED_STRING_CONTENT_SINGLE_QUOTES = /.*(?=''')/s
 const RE_TRIPLE_QUOTED_STRING_CONTENT_COMMON = /.*/s
 const RE_STRING_ESCAPE = /^\\./
 const RE_TRIPLE_SINGLE_QUOTE = /^'{3}/
+const RE_NUMERIC_OCTAL = /0(?:o|O)?[0-7][0-7_]*(n)?\b/
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -164,6 +165,9 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.Punctuation
           state = State.TopLevelContent
         } else if ((next = part.match(RE_NUMERIC))) {
+          token = TokenType.Numeric
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_NUMERIC_OCTAL))) {
           token = TokenType.Numeric
           state = State.TopLevelContent
         } else if ((next = part.match(RE_TRIPLE_DOUBLE_QUOTE))) {
