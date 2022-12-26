@@ -92,7 +92,7 @@ const RE_TRIPLE_QUOTED_STRING_CONTENT_SINGLE_QUOTES = /.*(?=''')/s
 const RE_TRIPLE_QUOTED_STRING_CONTENT_COMMON = /.*/s
 const RE_STRING_ESCAPE = /^\\./
 const RE_TRIPLE_SINGLE_QUOTE = /^'{3}/
-const RE_NUMERIC_OCTAL = /0(?:o|O)?[0-7][0-7_]*(n)?\b/
+const RE_NUMERIC_OCTAL = /^0(?:o|O)?[0-7][0-7_]*(n)?\b/
 
 export const initialLineState = {
   state: State.TopLevelContent,
