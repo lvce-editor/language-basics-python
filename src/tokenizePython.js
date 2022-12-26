@@ -87,8 +87,9 @@ const RE_NUMERIC =
 const RE_PUNCTUATION = /^[\(\)\{\}:,\+\-\*&=\/\\\[\]!\.<>%]+/
 const RE_FUNCTION_CALL_NAME = /^[\w]+(?=\s*\()/
 const RE_DECORATOR = /^@[\w]+/
-const RE_TRIPLE_QUOTED_STRING_CONTENT_1 = /.*(?=""")/s
-const RE_TRIPLE_QUOTED_STRING_CONTENT_2 = /.*/s
+const RE_TRIPLE_QUOTED_STRING_CONTENT_DOUBLE_QUOTES = /.*(?=""")/s
+const RE_TRIPLE_QUOTED_STRING_CONTENT_SINGLE_QUOTES = /.*(?=''')/s
+const RE_TRIPLE_QUOTED_STRING_CONTENT_COMMON = /.*/s
 const RE_STRING_ESCAPE = /^\\./
 const RE_TRIPLE_SINGLE_QUOTE = /^'{3}/
 
@@ -223,10 +224,14 @@ export const tokenizeLine = (line, lineState) => {
         if ((next = part.match(RE_TRIPLE_DOUBLE_QUOTE))) {
           token = TokenType.Punctuation
           state = State.TopLevelContent
-        } else if ((next = part.match(RE_TRIPLE_QUOTED_STRING_CONTENT_1))) {
+        } else if (
+          (next = part.match(RE_TRIPLE_QUOTED_STRING_CONTENT_DOUBLE_QUOTES))
+        ) {
           token = TokenType.String
           state = State.InsideTripleDoubleQuoteString
-        } else if ((next = part.match(RE_TRIPLE_QUOTED_STRING_CONTENT_2))) {
+        } else if (
+          (next = part.match(RE_TRIPLE_QUOTED_STRING_CONTENT_COMMON))
+        ) {
           token = TokenType.String
           state = State.InsideTripleDoubleQuoteString
         } else {
@@ -237,10 +242,15 @@ export const tokenizeLine = (line, lineState) => {
         if ((next = part.match(RE_TRIPLE_SINGLE_QUOTE))) {
           token = TokenType.Punctuation
           state = State.TopLevelContent
-        } else if ((next = part.match(RE_TRIPLE_QUOTED_STRING_CONTENT_1))) {
+        } else if (
+          (next = part.match(RE_TRIPLE_QUOTED_STRING_CONTENT_SINGLE_QUOTES))
+        ) {
           token = TokenType.String
           state = State.InsideTripleSingleQuoteString
-        } else if ((next = part.match(RE_TRIPLE_QUOTED_STRING_CONTENT_2))) {
+        } else if (
+          (next = part.match(RE_TRIPLE_QUOTED_STRING_CONTENT_COMMON))
+        ) {
+          next
           token = TokenType.String
           state = State.InsideTripleSingleQuoteString
         } else {
@@ -268,3 +278,5 @@ export const tokenizeLine = (line, lineState) => {
     tokens,
   }
 }
+
+tokenizeLine(`'''test'''`, initialLineState) //?

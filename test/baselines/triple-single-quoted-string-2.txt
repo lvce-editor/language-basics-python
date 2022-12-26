@@ -5,6 +5,7 @@ Whitespace
 Punctuation
 NewLine
 String
+Punctuation
 NewLine
 NewLine
-String
+VariableName
