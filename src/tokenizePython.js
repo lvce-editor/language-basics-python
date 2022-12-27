@@ -91,6 +91,7 @@ const RE_TRIPLE_QUOTED_STRING_CONTENT_DOUBLE_QUOTES = /.*(?=""")/s
 const RE_TRIPLE_QUOTED_STRING_CONTENT_SINGLE_QUOTES = /.*(?=''')/s
 const RE_TRIPLE_QUOTED_STRING_CONTENT_COMMON = /.*/s
 const RE_STRING_ESCAPE = /^\\./
+const RE_BACKSLASH = /^\\/
 const RE_TRIPLE_SINGLE_QUOTE = /^'{3}/
 const RE_NUMERIC_OCTAL = /^0(?:o|O)?[0-7][0-7_]*(n)?\b/
 
@@ -207,6 +208,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_STRING_ESCAPE))) {
           token = TokenType.String
           state = State.InsideDoubleQuoteString
+        } else if ((next = part.match(RE_BACKSLASH))) {
+          token = TokenType.String
+          state = State.InsideDoubleQuoteString
         } else {
           throw new Error('no')
         }
@@ -219,6 +223,9 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.PunctuationString
           state = State.TopLevelContent
         } else if ((next = part.match(RE_STRING_ESCAPE))) {
+          token = TokenType.String
+          state = State.InsideSingleQuoteString
+        } else if ((next = part.match(RE_BACKSLASH))) {
           token = TokenType.String
           state = State.InsideSingleQuoteString
         } else {
