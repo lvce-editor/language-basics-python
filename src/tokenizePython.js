@@ -84,7 +84,7 @@ const RE_KEYWORD =
 const RE_VARIABLE_NAME = /^[_a-zA-Z][a-zA-Z\d_]*/
 const RE_NUMERIC =
   /^((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b/
-const RE_PUNCTUATION = /^[\(\)\{\}:,\+\-\*&=\/\\\[\]!\.<>%]+/
+const RE_PUNCTUATION = /^[\(\)\{\}:,\+\-\*&=\/\\\[\]!\.<>%\|\~]+/
 const RE_FUNCTION_CALL_NAME = /^[\w]+(?=\s*\()/
 const RE_DECORATOR = /^@[\w]+/
 const RE_TRIPLE_QUOTED_STRING_CONTENT_DOUBLE_QUOTES = /.*(?=""")/s
