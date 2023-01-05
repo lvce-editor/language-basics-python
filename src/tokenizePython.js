@@ -44,6 +44,7 @@ export const TokenType = {
   KeywordImport: 955,
   KeywordControl: 956,
   Function: 957,
+  KeywordOperator: 958,
 }
 
 export const TokenMap = {
@@ -67,6 +68,7 @@ export const TokenMap = {
   [TokenType.KeywordImport]: 'KeywordImport',
   [TokenType.KeywordControl]: 'KeywordControl',
   [TokenType.Function]: 'Function',
+  [TokenType.KeywordOperator]: 'KeywordOperator',
 }
 
 const RE_WHITESPACE = /^\s+/
@@ -150,7 +152,14 @@ export const tokenizeLine = (line, lineState) => {
             case 'raise':
             case 'break':
             case 'pass':
+            case 'assert':
               token = TokenType.KeywordControl
+              break
+            case 'or':
+            case 'not':
+            case 'and':
+            case 'in':
+              token = TokenType.KeywordOperator
               break
             default:
               token = TokenType.Keyword
