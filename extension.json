@@ -6,7 +6,7 @@
     {
       "id": "python",
       "extensions": [".py"],
-      "fileNames": ["SCsub"],
+      "fileNames": ["SCsub", "SConstruct"],
       "configuration": "./languageConfiguration.json",
       "tokenize": "src/tokenizePython.js",
       "firstLine": "^#!\\s*/?.*\\bpython[0-9.-]*\\b"
