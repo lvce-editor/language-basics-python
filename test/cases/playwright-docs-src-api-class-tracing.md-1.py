@@ -1,0 +1,6 @@
+browser = chromium.launch()
+context = browser.new_context()
+context.tracing.start(screenshots=True, snapshots=True)
+page = context.new_page()
+page.goto("https://playwright.dev")
+context.tracing.stop(path = "trace.zip")

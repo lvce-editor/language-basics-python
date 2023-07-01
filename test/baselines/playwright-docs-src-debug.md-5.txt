@@ -1,0 +1,17 @@
+Comment
+Comment
+NewLine
+VariableName
+Punctuation
+Function
+Punctuation
+VariableName
+Punctuation
+LanguageConstant
+Punctuation
+Whitespace
+VariableName
+Punctuation
+Numeric
+Punctuation
+NewLine

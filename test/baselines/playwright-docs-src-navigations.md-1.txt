@@ -1,0 +1,12 @@
+Comment
+Comment
+NewLine
+VariableName
+Punctuation
+Function
+Punctuation
+PunctuationString
+String
+PunctuationString
+Punctuation
+NewLine

@@ -1,0 +1,5 @@
+context = browser.new_context()
+page = context.new_page()
+context.route("**/*.{png,jpg,jpeg}", lambda route: route.abort())
+page.goto("https://example.com")
+browser.close()

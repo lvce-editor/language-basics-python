@@ -1,0 +1,5 @@
+handle = page.evaluate_handle("({ window, document })")
+properties = handle.get_properties()
+window_handle = properties.get("window")
+document_handle = properties.get("document")
+handle.dispose()
