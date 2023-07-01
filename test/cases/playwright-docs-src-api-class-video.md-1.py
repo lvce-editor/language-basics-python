@@ -1,0 +1,1 @@
+print(page.video.path())

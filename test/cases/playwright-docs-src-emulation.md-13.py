@@ -1,0 +1,1 @@
+context.clear_permissions()

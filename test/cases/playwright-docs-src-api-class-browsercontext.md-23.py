@@ -1,0 +1,6 @@
+context = await browser.new_context()
+page = await context.new_page()
+await context.route(re.compile(r"(\.png$)|(\.jpg$)"), lambda route: route.abort())
+page = await context.new_page()
+await page.goto("https://example.com")
+await browser.close()
