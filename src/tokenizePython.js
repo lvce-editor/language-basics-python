@@ -153,6 +153,7 @@ export const tokenizeLine = (line, lineState) => {
             case 'break':
             case 'pass':
             case 'assert':
+            case 'is':
               token = TokenType.KeywordControl
               break
             case 'or':

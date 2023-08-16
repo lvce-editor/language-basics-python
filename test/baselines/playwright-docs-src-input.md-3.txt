@@ -29,7 +29,7 @@ Punctuation
 Function
 Punctuation
 Whitespace
-Keyword
+KeywordControl
 Whitespace
 LanguageConstant
 NewLine
