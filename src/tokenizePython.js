@@ -86,7 +86,7 @@ const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^'\\]+/
 const RE_STRING_TRIPLE_DOUBLE_QUOTE_CONTENT = /^.+(?=""")/
 const RE_LINE_COMMENT = /^#/
 const RE_KEYWORD =
-  /^(?:__debug__|AttributeError|ConnectionAbortedError|PendingDeprecationWarning|ModuleNotFoundError|SystemExit|Warning|Exception|BaseException|Ellipsis|yield|with|while|try|true|True|return|raise|pass|or|NotImplemented|not|nonlocal|None|lambda|is|in|import|if|global|from|for|finally|False|false|except|else|elif|del|def|continue|class|break|await|async|assert|as|and)\b/
+  /^(?:__debug__|match|case|AttributeError|ConnectionAbortedError|PendingDeprecationWarning|ModuleNotFoundError|SystemExit|Warning|Exception|BaseException|Ellipsis|yield|with|while|try|true|True|return|raise|pass|or|NotImplemented|not|nonlocal|None|lambda|is|in|import|if|global|from|for|finally|False|false|except|else|elif|del|def|continue|class|break|await|async|assert|as|and)\b/
 const RE_VARIABLE_NAME = /^[_a-zA-Z][a-zA-Z\d_]*/
 const RE_NUMERIC =
   /^((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b/
@@ -152,24 +152,26 @@ export const tokenizeLine = (line, lineState) => {
             case 'import':
               token = TokenType.KeywordImport
               break
-            case 'if':
+            case 'as':
+            case 'assert':
+            case 'break':
+            case 'case':
+            case 'catch':
+            case 'continue':
             case 'elif':
             case 'else':
-            case 'try':
-            case 'catch':
-            case 'finally':
-            case 'while':
-            case 'for':
-            case 'continue':
-            case 'not':
             case 'except':
-            case 'with':
-            case 'as':
-            case 'raise':
-            case 'break':
-            case 'pass':
-            case 'assert':
+            case 'finally':
+            case 'for':
+            case 'if':
             case 'is':
+            case 'match':
+            case 'not':
+            case 'pass':
+            case 'raise':
+            case 'try':
+            case 'while':
+            case 'with':
               token = TokenType.KeywordControl
               break
             case 'or':
