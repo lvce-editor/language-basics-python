@@ -1,8 +1,8 @@
 KeywordControl
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 KeywordControl
 Whitespace

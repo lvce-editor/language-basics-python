@@ -283,7 +283,7 @@ NewLine
 Whitespace
 KeywordControl
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation

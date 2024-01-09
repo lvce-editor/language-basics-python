@@ -31,7 +31,7 @@ String
 PunctuationString
 Punctuation
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 Function
 Punctuation
@@ -47,7 +47,7 @@ NewLine
 KeywordControl
 Whitespace
 Punctuation
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
@@ -55,7 +55,7 @@ Function
 Punctuation
 NewLine
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
@@ -75,7 +75,7 @@ Punctuation
 Function
 Punctuation
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation

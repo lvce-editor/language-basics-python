@@ -6,7 +6,7 @@ Comment
 Comment
 NewLine
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
@@ -22,7 +22,7 @@ Comment
 Comment
 NewLine
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation

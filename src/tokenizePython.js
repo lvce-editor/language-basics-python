@@ -46,6 +46,7 @@ export const TokenType = {
   Function: 957,
   KeywordOperator: 958,
   ClassName: 994,
+  KeywordModifier: 995,
 }
 
 export const TokenMap = {
@@ -71,6 +72,7 @@ export const TokenMap = {
   [TokenType.Function]: 'Function',
   [TokenType.KeywordOperator]: 'KeywordOperator',
   [TokenType.ClassName]: 'Class',
+  [TokenType.KeywordModifier]: 'KeywordModifier',
 }
 
 const RE_WHITESPACE = /^\s+/
@@ -175,6 +177,10 @@ export const tokenizeLine = (line, lineState) => {
             case 'and':
             case 'in':
               token = TokenType.KeywordOperator
+              break
+            case 'async':
+            case 'await':
+              token = TokenType.KeywordModifier
               break
             default:
               token = TokenType.Keyword

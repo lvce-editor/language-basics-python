@@ -69,7 +69,7 @@ NewLine
 Comment
 Comment
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 KeywordControl
 Whitespace
@@ -88,7 +88,7 @@ Comment
 Comment
 NewLine
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
@@ -103,7 +103,7 @@ VariableName
 Whitespace
 Punctuation
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
@@ -113,7 +113,7 @@ NewLine
 Comment
 Comment
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
@@ -127,7 +127,7 @@ Whitespace
 Comment
 Comment
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation

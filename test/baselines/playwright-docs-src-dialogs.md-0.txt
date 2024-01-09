@@ -17,7 +17,7 @@ Punctuation
 Function
 Punctuation
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation

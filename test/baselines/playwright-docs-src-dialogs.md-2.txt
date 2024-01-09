@@ -19,7 +19,7 @@ Punctuation
 VariableName
 Punctuation
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation

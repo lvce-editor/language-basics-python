@@ -20,7 +20,7 @@ PunctuationString
 Punctuation
 NewLine
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation

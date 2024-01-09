@@ -2,14 +2,14 @@ VariableName
 Whitespace
 Punctuation
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
 Function
 Punctuation
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation

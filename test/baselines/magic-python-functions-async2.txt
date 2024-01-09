@@ -1,8 +1,8 @@
-Keyword
+KeywordModifier
 Whitespace
 Punctuation
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 Punctuation
 Whitespace

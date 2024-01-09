@@ -38,7 +38,7 @@ NewLine
 Comment
 Comment
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation

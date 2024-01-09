@@ -1,4 +1,4 @@
-Keyword
+KeywordModifier
 Whitespace
 Keyword
 Whitespace
@@ -21,7 +21,7 @@ String
 PunctuationString
 NewLine
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
@@ -44,7 +44,7 @@ Whitespace
 VariableName
 Punctuation
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
