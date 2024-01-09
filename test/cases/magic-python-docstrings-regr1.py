@@ -1,0 +1,4 @@
+#:
+    @asd
+    def foo():
+        pass

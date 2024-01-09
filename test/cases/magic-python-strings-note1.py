@@ -1,0 +1,3 @@
+a = 'XXX FIXME NB TODO'
+a = r'XXX FIXME NB TODO'
+a = b'XXX FIXME NB TODO'

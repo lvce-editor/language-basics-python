@@ -1,0 +1,6 @@
+a = 's t r'
+a = u's t r'
+a = b's t r'
+a = r's t r'
+a = br's t r'
+a = rb's t r'

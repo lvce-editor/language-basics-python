@@ -1,0 +1,17 @@
+VariableName
+Punctuation
+VariableName
+Punctuation
+VariableName
+Punctuation
+LanguageConstant
+Punctuation
+VariableName
+NewLine
+Keyword
+Whitespace
+Function
+Punctuation
+Whitespace
+KeywordControl
+NewLine

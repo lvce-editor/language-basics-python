@@ -1,0 +1,15 @@
+Numeric
+Text
+NewLine
+Text
+NewLine
+Text
+NewLine
+Punctuation
+Text
+NewLine
+Text
+NewLine
+Numeric
+Text
+NewLine

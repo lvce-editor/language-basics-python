@@ -1,0 +1,8 @@
+Keyword
+Whitespace
+Function
+Punctuation
+Numeric
+Punctuation
+KeywordControl
+NewLine

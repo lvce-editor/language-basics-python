@@ -1,0 +1,8 @@
+Comment
+Comment
+NewLine
+Function
+Punctuation
+Keyword
+Punctuation
+NewLine

@@ -1,0 +1,7 @@
+Function
+Punctuation
+Keyword
+Punctuation
+Numeric
+Punctuation
+NewLine

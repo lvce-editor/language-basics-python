@@ -1,0 +1,8 @@
+AttributeError ConnectionAbortedError
+PendingDeprecationWarning
+ModuleNotFoundError
+SystemExit
+NotImplemented True None False Ellipsis
+Warning
+Exception BaseException
+sum oct abs type object print exec

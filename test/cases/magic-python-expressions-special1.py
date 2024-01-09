@@ -1,0 +1,2 @@
+__version__ __doc__ __file__
+__author__
