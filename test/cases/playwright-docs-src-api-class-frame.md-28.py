@@ -1,2 +1,15 @@
-await frame.type("#mytextarea", "hello") # types instantly
-await frame.type("#mytextarea", "world", delay=100) # types slower, like a user
+import asyncio
+from playwright.async_api import async_playwright, Playwright
+
+async def run(playwright: Playwright):
+    webkit = playwright.webkit
+    browser = await webkit.launch()
+    page = await browser.new_page()
+    await page.evaluate("window.x = 0; setTimeout(() => { window.x = 100 }, 1000);")
+    await page.main_frame.wait_for_function("() => window.x > 0")
+    await browser.close()
+
+async def main():
+    async with async_playwright() as playwright:
+        await run(playwright)
+asyncio.run(main())

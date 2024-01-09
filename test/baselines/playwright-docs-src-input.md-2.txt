@@ -18,10 +18,10 @@ NewLine
 Comment
 Comment
 NewLine
-KeywordControl
-Whitespace
 Keyword
 Whitespace
+Function
+Punctuation
 VariableName
 Punctuation
 Function
@@ -32,10 +32,6 @@ PunctuationString
 Punctuation
 Function
 Punctuation
-Whitespace
-KeywordControl
-Whitespace
-LanguageConstant
 NewLine
 NewLine
 Comment

@@ -1,3 +1,17 @@
-async with frame.expect_navigation():
-    await frame.click("a.delayed-navigation") # clicking the link will indirectly cause a navigation
-# Resolves after navigation has finished
+import asyncio
+from playwright.async_api import async_playwright, Playwright
+
+async def run(playwright: Playwright):
+    chromium = playwright.chromium
+    browser = await chromium.launch()
+    page = await browser.new_page()
+    for current_url in ["https://google.com", "https://bbc.com"]:
+        await page.goto(current_url, wait_until="domcontentloaded")
+        element = await page.main_frame.wait_for_selector("img")
+        print("Loaded image: " + str(await element.get_attribute("src")))
+    await browser.close()
+
+async def main():
+    async with async_playwright() as playwright:
+        await run(playwright)
+asyncio.run(main())

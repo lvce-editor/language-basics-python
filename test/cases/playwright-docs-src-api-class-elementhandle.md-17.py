@@ -1,4 +1,4 @@
-# single selection matching the value
+# Single selection matching the value or label
 handle.select_option("blue")
 # single selection matching both the label
 handle.select_option(label="blue")

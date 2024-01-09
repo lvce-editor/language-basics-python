@@ -1,10 +1,10 @@
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, Playwright
 
 def handle_dialog(dialog):
     print(dialog.message)
     dialog.dismiss()
 
-def run(playwright):
+def run(playwright: Playwright):
     chromium = playwright.chromium
     browser = chromium.launch()
     page = browser.new_page()

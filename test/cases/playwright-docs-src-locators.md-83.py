@@ -1,1 +1,1 @@
-page.get_by_role("button").count()
+page.get_by_role("button").click()

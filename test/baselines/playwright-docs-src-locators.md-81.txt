@@ -1,4 +1,8 @@
 VariableName
+Whitespace
+Punctuation
+Whitespace
+VariableName
 Punctuation
 Function
 Punctuation
@@ -6,6 +10,17 @@ PunctuationString
 String
 PunctuationString
 Punctuation
+NewLine
+VariableName
+Whitespace
+Punctuation
+Whitespace
+VariableName
+Punctuation
 Function
+Punctuation
+PunctuationString
+String
+PunctuationString
 Punctuation
 NewLine

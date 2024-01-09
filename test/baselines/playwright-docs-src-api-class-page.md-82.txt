@@ -1,3 +1,14 @@
+Keyword
+Whitespace
+VariableName
+Punctuation
+Function
+Punctuation
+PunctuationString
+String
+PunctuationString
+Punctuation
+Whitespace
 Comment
 Comment
 NewLine
@@ -7,6 +18,8 @@ VariableName
 Punctuation
 Function
 Punctuation
-Numeric
+PunctuationString
+String
+PunctuationString
 Punctuation
 NewLine

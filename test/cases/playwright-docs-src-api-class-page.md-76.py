@@ -1,8 +1,10 @@
-async with page.expect_request("http://example.com/resource") as first:
-    await page.get_by_text("trigger request").click()
-first_request = await first.value
+async with page.expect_response("https://example.com/resource") as response_info:
+    await page.get_by_text("trigger response").click()
+response = await response_info.value
+return response.ok
 
 # or with a lambda
-async with page.expect_request(lambda request: request.url == "http://example.com" and request.method == "get") as second:
-    await page.get_by_text("trigger request").click()
-second_request = await second.value
+async with page.expect_response(lambda response: response.url == "https://example.com" and response.status == 200) as response_info:
+    await page.get_by_text("trigger response").click()
+response = await response_info.value
+return response.ok

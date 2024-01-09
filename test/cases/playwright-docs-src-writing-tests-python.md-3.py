@@ -1,5 +1,1 @@
-from playwright.sync_api import Page
-
-def test_basic_test(page: Page):
-  pass
-  # ...
+page.get_by_role("link", name="Get started").click()

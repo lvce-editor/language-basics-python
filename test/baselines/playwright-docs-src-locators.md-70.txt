@@ -1,7 +1,3 @@
-VariableName
-Whitespace
-Punctuation
-Whitespace
 Keyword
 Whitespace
 VariableName
@@ -13,7 +9,5 @@ String
 PunctuationString
 Punctuation
 Function
-Punctuation
-Numeric
 Punctuation
 NewLine

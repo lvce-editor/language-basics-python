@@ -1,10 +1,17 @@
-async with page.expect_response("https://example.com/resource") as response_info:
-    await page.get_by_text("trigger response").click()
-response = await response_info.value
-return response.ok
+import asyncio
+from playwright.async_api import async_playwright, Playwright
 
-# or with a lambda
-async with page.expect_response(lambda response: response.url == "https://example.com" and response.status == 200) as response_info:
-    await page.get_by_text("trigger response").click()
-response = await response_info.value
-return response.ok
+async def run(playwright: Playwright):
+    chromium = playwright.chromium
+    browser = await chromium.launch()
+    page = await browser.new_page()
+    for current_url in ["https://google.com", "https://bbc.com"]:
+        await page.goto(current_url, wait_until="domcontentloaded")
+        element = await page.wait_for_selector("img")
+        print("Loaded image: " + str(await element.get_attribute("src")))
+    await browser.close()
+
+async def main():
+    async with async_playwright() as playwright:
+        await run(playwright)
+asyncio.run(main())

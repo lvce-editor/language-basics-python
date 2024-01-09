@@ -1,5 +1,5 @@
 import hashlib
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, Playwright
 
 def sha256(text):
     m = hashlib.sha256()
@@ -7,7 +7,7 @@ def sha256(text):
     return m.hexdigest()
 
 
-def run(playwright):
+def run(playwright: Playwright):
     webkit = playwright.webkit
     browser = webkit.launch(headless=False)
     page = browser.new_page()

@@ -1,1 +1,1 @@
-banana = await page.get_by_role("listitem").nth(1)
+await page.get_by_test_id("orange").click()

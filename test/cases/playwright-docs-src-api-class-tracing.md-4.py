@@ -1,4 +1,4 @@
-await context.tracing.start(name="trace", screenshots=True, snapshots=True)
+await context.tracing.start(screenshots=True, snapshots=True)
 page = await context.new_page()
 await page.goto("https://playwright.dev")
 

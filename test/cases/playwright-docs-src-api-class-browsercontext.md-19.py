@@ -1,14 +1,14 @@
 import asyncio
 import hashlib
-from playwright.async_api import async_playwright
+from playwright.async_api import async_playwright, Playwright
 
-def sha256(text):
+def sha256(text: str) -> str:
     m = hashlib.sha256()
     m.update(bytes(text, "utf8"))
     return m.hexdigest()
 
 
-async def run(playwright):
+async def run(playwright: Playwright):
     webkit = playwright.webkit
     browser = await webkit.launch(headless=False)
     context = await browser.new_context()

@@ -1,2 +1,2 @@
-# Type character by character
-await page.locator('#area').type('Hello World!')
+# Press keys one by one
+await page.locator('#area').pressSequentially('Hello World!')

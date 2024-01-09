@@ -1,3 +1,5 @@
+Keyword
+Whitespace
 VariableName
 Punctuation
 Function

@@ -1,6 +1,6 @@
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, Playwright
 
-def run(playwright):
+def run(playwright: Playwright):
     webkit = playwright.webkit
     iphone = playwright.devices["iPhone 6"]
     browser = webkit.launch()

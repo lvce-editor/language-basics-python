@@ -1,2 +1,2 @@
-# wait for 1 second
-page.wait_for_timeout(1000)
+page.click("a.delayed-navigation") # clicking the link will indirectly cause a navigation
+page.wait_for_url("**/target.html")

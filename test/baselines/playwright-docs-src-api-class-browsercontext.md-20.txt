@@ -19,6 +19,14 @@ Function
 Punctuation
 VariableName
 Punctuation
+Whitespace
+VariableName
+Punctuation
+Whitespace
+Punctuation
+Whitespace
+VariableName
+Punctuation
 NewLine
 Whitespace
 VariableName
@@ -59,6 +67,9 @@ Keyword
 Whitespace
 Function
 Punctuation
+VariableName
+Punctuation
+Whitespace
 VariableName
 Punctuation
 NewLine

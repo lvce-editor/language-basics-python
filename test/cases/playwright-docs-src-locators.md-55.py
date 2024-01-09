@@ -1,4 +1,3 @@
-save_button = page.get_by_role("button", name="Save")
-# ...
-dialog = page.get_by_test_id("settings-dialog")
-dialog.locator(save_button).click()
+product = page.get_by_role("listitem").filter(has_text="Product 2")
+
+product.get_by_role("button", name="Add to cart").click()

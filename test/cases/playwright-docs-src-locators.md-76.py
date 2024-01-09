@@ -1,4 +1,2 @@
-rows = page.get_by_role("listitem")
-count = await rows.count()
-for i in range(count):
-    print(await rows.nth(i).text_content())
+for row in await page.get_by_role("listitem").all():
+    print(await row.text_content())

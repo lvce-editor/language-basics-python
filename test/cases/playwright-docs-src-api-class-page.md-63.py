@@ -1,2 +1,3 @@
-page.type("#mytextarea", "hello") # types instantly
-page.type("#mytextarea", "world", delay=100) # types slower, like a user
+with page.expect_event("framenavigated") as event_info:
+    page.get_by_role("button")
+frame = event_info.value

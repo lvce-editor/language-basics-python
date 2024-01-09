@@ -1,2 +1,4 @@
 rows = page.get_by_role("listitem")
-texts = rows.evaluate_all("list => list.map(element => element.textContent)")
+count = rows.count()
+for i in range(count):
+    print(rows.nth(i).text_content())

@@ -1,6 +1,4 @@
-async with page.expect_popup() as page_info:
-    await page.get_by_role("button").click() # click triggers a popup.
-popup = await page_info.value
-# Wait for the "DOMContentLoaded" event.
-await popup.wait_for_load_state("domcontentloaded")
-print(await popup.title()) # popup is ready to use.
+async with page.expect_navigation():
+    # This action triggers the navigation after a timeout.
+    await page.get_by_text("Navigate after timeout").click()
+# Resolves after navigation has finished

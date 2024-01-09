@@ -1,1 +1,3 @@
-await context.route_from_har("github.har.zip")
+context = browser.new_context(record_har_path="github.har.zip")
+# ... do stuff ...
+context.close()

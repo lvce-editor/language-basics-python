@@ -1,10 +1,10 @@
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, Playwright
 
 path_to_extension = "./my-extension"
 user_data_dir = "/tmp/test-user-data-dir"
 
 
-def run(playwright):
+def run(playwright: Playwright):
     context = playwright.chromium.launch_persistent_context(
         user_data_dir,
         headless=False,

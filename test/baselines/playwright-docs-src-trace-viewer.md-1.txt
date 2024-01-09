@@ -43,6 +43,15 @@ Punctuation
 NewLine
 NewLine
 VariableName
+Whitespace
+Punctuation
+Whitespace
+VariableName
+Punctuation
+Function
+Punctuation
+NewLine
+VariableName
 Punctuation
 Function
 Punctuation

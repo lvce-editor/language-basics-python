@@ -46,9 +46,6 @@ PunctuationString
 String
 PunctuationString
 Punctuation
-Whitespace
-Comment
-Comment
 NewLine
 Whitespace
 VariableName
