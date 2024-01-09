@@ -1,4 +1,4 @@
-Function
+KeywordControl
 Whitespace
 Punctuation
 VariableName
@@ -14,7 +14,7 @@ Whitespace
 Comment
 Comment
 NewLine
-VariableName
+KeywordControl
 Whitespace
 Punctuation
 VariableName
@@ -29,7 +29,7 @@ Whitespace
 Comment
 Comment
 NewLine
-VariableName
+KeywordControl
 Whitespace
 Punctuation
 VariableName

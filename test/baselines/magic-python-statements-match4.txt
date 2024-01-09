@@ -1,10 +1,10 @@
-VariableName
+KeywordControl
 Whitespace
 VariableName
 Punctuation
 NewLine
 Whitespace
-VariableName
+KeywordControl
 Whitespace
 Function
 Punctuation
@@ -33,7 +33,7 @@ PunctuationString
 Punctuation
 NewLine
 Whitespace
-VariableName
+KeywordControl
 Whitespace
 Function
 Punctuation

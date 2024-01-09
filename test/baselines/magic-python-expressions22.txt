@@ -1,10 +1,4 @@
-VariableName
-Whitespace
-Punctuation
-Whitespace
-Numeric
-NewLine
-VariableName
+KeywordControl
 Whitespace
 Punctuation
 Whitespace
@@ -12,7 +6,13 @@ Numeric
 NewLine
 KeywordControl
 Whitespace
-VariableName
+Punctuation
+Whitespace
+Numeric
+NewLine
+KeywordControl
+Whitespace
+KeywordControl
 Whitespace
 Punctuation
 Whitespace
@@ -22,7 +22,7 @@ NewLine
 Whitespace
 KeywordReturn
 Whitespace
-VariableName
+KeywordControl
 Whitespace
 Punctuation
 Whitespace

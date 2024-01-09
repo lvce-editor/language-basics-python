@@ -1,4 +1,4 @@
-VariableName
+KeywordControl
 Whitespace
 PunctuationString
 String
@@ -15,7 +15,7 @@ Whitespace
 Comment
 Comment
 NewLine
-VariableName
+KeywordControl
 Whitespace
 PunctuationString
 String
@@ -32,7 +32,7 @@ Whitespace
 Comment
 Comment
 NewLine
-VariableName
+KeywordControl
 Whitespace
 VariableName
 PunctuationString
@@ -46,7 +46,7 @@ Whitespace
 Comment
 Comment
 NewLine
-VariableName
+KeywordControl
 Whitespace
 VariableName
 PunctuationString
@@ -60,7 +60,7 @@ Whitespace
 Comment
 Comment
 NewLine
-VariableName
+KeywordControl
 Whitespace
 Punctuation
 VariableName
@@ -72,7 +72,7 @@ Whitespace
 Comment
 Comment
 NewLine
-VariableName
+KeywordControl
 Whitespace
 KeywordControl
 Whitespace
