@@ -1,6 +1,6 @@
 VariableName
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 Keyword
 Whitespace
@@ -15,7 +15,7 @@ Whitespace
 Numeric
 NewLine
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 KeywordControl
 Whitespace
@@ -33,7 +33,7 @@ VariableName
 Punctuation
 NewLine
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 KeywordControl
 Whitespace
@@ -48,7 +48,7 @@ VariableName
 Punctuation
 NewLine
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 Function
 Punctuation

@@ -4,7 +4,7 @@ VariableName
 Whitespace
 KeywordOperator
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
@@ -20,7 +20,7 @@ NewLine
 Whitespace
 Function
 Punctuation
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation

@@ -26,7 +26,7 @@ String
 PunctuationString
 Punctuation
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
@@ -42,7 +42,7 @@ String
 PunctuationString
 Punctuation
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 Function
 Punctuation

@@ -6,7 +6,7 @@ PunctuationString
 String
 PunctuationString
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation

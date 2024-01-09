@@ -13,7 +13,7 @@ Punctuation
 NewLine
 KeywordControl
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation

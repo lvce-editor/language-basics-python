@@ -2,7 +2,7 @@ VariableName
 Whitespace
 Punctuation
 Whitespace
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
@@ -13,7 +13,7 @@ NewLine
 Comment
 Comment
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
@@ -27,7 +27,7 @@ NewLine
 Comment
 Comment
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
@@ -48,7 +48,7 @@ NewLine
 Comment
 Comment
 NewLine
-Keyword
+KeywordModifier
 Whitespace
 VariableName
 Punctuation
