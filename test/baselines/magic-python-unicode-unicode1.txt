@@ -10,6 +10,7 @@ String
 PunctuationString
 NewLine
 Whitespace
+Punctuation
 Text
 NewLine
 Whitespace

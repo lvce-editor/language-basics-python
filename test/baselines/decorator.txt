@@ -4,6 +4,7 @@ VariableName
 Punctuation
 NewLine
 Whitespace
+Punctuation
 VariableName
 NewLine
 Whitespace

@@ -3,6 +3,7 @@ Whitespace
 VariableName
 NewLine
 NewLine
+Punctuation
 VariableName
 Punctuation
 VariableName

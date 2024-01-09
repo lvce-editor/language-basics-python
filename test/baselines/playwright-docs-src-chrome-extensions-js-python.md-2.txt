@@ -33,6 +33,7 @@ VariableName
 NewLine
 NewLine
 NewLine
+Punctuation
 VariableName
 Punctuation
 Function
@@ -139,6 +140,7 @@ Punctuation
 NewLine
 NewLine
 NewLine
+Punctuation
 VariableName
 Punctuation
 Function

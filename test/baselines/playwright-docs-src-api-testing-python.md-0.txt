@@ -53,6 +53,7 @@ PunctuationString
 NewLine
 NewLine
 NewLine
+Punctuation
 VariableName
 Punctuation
 Function

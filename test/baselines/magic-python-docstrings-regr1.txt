@@ -2,6 +2,7 @@ Comment
 Comment
 NewLine
 Whitespace
+Punctuation
 VariableName
 NewLine
 Whitespace
