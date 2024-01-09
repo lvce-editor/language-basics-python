@@ -14,6 +14,8 @@ NewLine
 NewLine
 Keyword
 Whitespace
+Keyword
+Whitespace
 Function
 Punctuation
 VariableName
@@ -32,6 +34,8 @@ Comment
 Comment
 NewLine
 Whitespace
+Keyword
+Whitespace
 VariableName
 Punctuation
 Function
@@ -43,6 +47,8 @@ Punctuation
 Function
 Punctuation
 NewLine
+Whitespace
+Keyword
 Whitespace
 Function
 Punctuation

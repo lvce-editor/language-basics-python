@@ -7,6 +7,9 @@ Whitespace
 KeywordImport
 Whitespace
 VariableName
+Punctuation
+Whitespace
+VariableName
 NewLine
 NewLine
 Keyword
@@ -15,6 +18,9 @@ Function
 Punctuation
 VariableName
 Punctuation
+Whitespace
+VariableName
+Punctuation
 NewLine
 Whitespace
 VariableName
@@ -36,7 +42,7 @@ Function
 Punctuation
 VariableName
 Punctuation
-Keyword
+LanguageConstant
 Punctuation
 NewLine
 Whitespace

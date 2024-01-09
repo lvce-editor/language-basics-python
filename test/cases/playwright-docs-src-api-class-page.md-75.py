@@ -1,4 +1,8 @@
-with page.expect_navigation():
-    # This action triggers the navigation after a timeout.
-    page.get_by_text("Navigate after timeout").click()
-# Resolves after navigation has finished
+with page.expect_request("http://example.com/resource") as first:
+    page.get_by_text("trigger request").click()
+first_request = first.value
+
+# or with a lambda
+with page.expect_request(lambda request: request.url == "http://example.com" and request.method == "get") as second:
+    page.get_by_text("trigger request").click()
+second_request = second.value

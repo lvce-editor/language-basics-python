@@ -1,2 +1,3 @@
-await frame.click("button") # click triggers navigation.
-await frame.wait_for_load_state() # the promise resolves after "load" event.
+async with frame.expect_navigation():
+    await frame.click("a.delayed-navigation") # clicking the link will indirectly cause a navigation
+# Resolves after navigation has finished

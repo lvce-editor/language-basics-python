@@ -1,2 +1,4 @@
-await element_handle.type("hello") # types instantly
-await element_handle.type("world", delay=100) # types slower, like a user
+await page.set_content("<div><span></span></div>")
+div = await page.query_selector("div")
+# waiting for the "span" selector relative to the div.
+span = await div.wait_for_selector("span", state="attached")

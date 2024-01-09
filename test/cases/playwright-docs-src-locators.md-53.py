@@ -1,3 +1,5 @@
-product = page.get_by_role("listitem").filter(has_text="Product 2")
-
-product.get_by_role("button", name="Add to cart").click()
+expect(
+    page.get_by_role("listitem").filter(
+        has_not=page.get_by_role("heading", name="Product 2")
+    )
+).to_have_count(1)

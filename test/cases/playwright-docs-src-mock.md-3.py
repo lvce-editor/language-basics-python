@@ -1,6 +1,6 @@
 def test_gets_the_json_from_api_and_adds_a_new_fruit(page: Page):
     def handle(route: Route):
-        response = route.fulfill()
+        response = route.fetch()
         json = response.json()
         json.append({ "name": "Playwright", "id": 100})
         # Fulfill using the original response, while patching the response body

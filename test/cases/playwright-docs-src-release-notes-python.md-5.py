@@ -1,1 +1,1 @@
-context.route_from_har("github.har.zip")
+await context.route_from_har("github.har.zip")

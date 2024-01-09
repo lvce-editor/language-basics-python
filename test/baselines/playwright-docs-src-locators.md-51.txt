@@ -1,3 +1,6 @@
+Comment
+Comment
+NewLine
 Function
 Punctuation
 NewLine
@@ -17,6 +20,12 @@ Whitespace
 VariableName
 Punctuation
 VariableName
+Punctuation
+Function
+Punctuation
+PunctuationString
+String
+PunctuationString
 Punctuation
 Function
 Punctuation

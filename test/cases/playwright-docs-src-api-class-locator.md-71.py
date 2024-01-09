@@ -1,2 +1,1 @@
-element.type("hello") # types instantly
-element.type("world", delay=100) # types slower, like a user
+page.get_by_role("checkbox").set_checked(True)

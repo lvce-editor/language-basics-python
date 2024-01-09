@@ -1,4 +1,4 @@
-# Single selection matching the value
+# Single selection matching the value or label
 await page.get_by_label('Choose a color').select_option('blue')
 
 # Single selection matching the label

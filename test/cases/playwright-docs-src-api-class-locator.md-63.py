@@ -1,1 +1,3 @@
-page.get_by_role("link").screenshot(animations="disabled", path="link.png")
+locator = page.get_by_label("Password")
+locator.press_sequentially("my password")
+locator.press("Enter")

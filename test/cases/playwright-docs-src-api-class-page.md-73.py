@@ -1,6 +1,4 @@
-with page.expect_popup() as page_info:
-    page.get_by_role("button").click() # click triggers a popup.
-popup = page_info.value
-# Wait for the "DOMContentLoaded" event.
-popup.wait_for_load_state("domcontentloaded")
-print(popup.title()) # popup is ready to use.
+with page.expect_navigation():
+    # This action triggers the navigation after a timeout.
+    page.get_by_text("Navigate after timeout").click()
+# Resolves after navigation has finished

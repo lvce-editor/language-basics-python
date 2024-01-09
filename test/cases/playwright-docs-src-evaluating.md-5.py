@@ -8,15 +8,15 @@ page.evaluate('array => array.length', [1, 2, 3])
 page.evaluate('object => object.foo', { 'foo': 'bar' })
 
 # A single handle.
-button = page.evaluate('window.button')
+button = page.evaluate_handle('window.button')
 page.evaluate('button => button.textContent', button)
 
 # Alternative notation using elementHandle.evaluate.
 button.evaluate('(button, from) => button.textContent.substring(from)', 5)
 
 # Object with multiple handles.
-button1 = page.evaluate('window.button1')
-button2 = page.evaluate('.button2')
+button1 = page.evaluate_handle('window.button1')
+button2 = page.evaluate_handle('.button2')
 page.evaluate("""o => o.button1.textContent + o.button2.textContent""",
     { 'button1': button1, 'button2': button2 })
 

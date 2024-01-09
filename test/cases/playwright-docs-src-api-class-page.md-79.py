@@ -1,10 +1,14 @@
-with page.expect_response("https://example.com/resource") as response_info:
-    page.get_by_text("trigger response").click()
-response = response_info.value
-return response.ok
+from playwright.sync_api import sync_playwright, Playwright
 
-# or with a lambda
-with page.expect_response(lambda response: response.url == "https://example.com" and response.status == 200) as response_info:
-    page.get_by_text("trigger response").click()
-response = response_info.value
-return response.ok
+def run(playwright: Playwright):
+    chromium = playwright.chromium
+    browser = chromium.launch()
+    page = browser.new_page()
+    for current_url in ["https://google.com", "https://bbc.com"]:
+        page.goto(current_url, wait_until="domcontentloaded")
+        element = page.wait_for_selector("img")
+        print("Loaded image: " + str(element.get_attribute("src")))
+    browser.close()
+
+with sync_playwright() as playwright:
+    run(playwright)

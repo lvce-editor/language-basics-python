@@ -1,12 +1,4 @@
 VariableName
-Whitespace
-Punctuation
-Whitespace
-PunctuationString
-String
-PunctuationString
-NewLine
-VariableName
 Punctuation
 Function
 Punctuation
@@ -15,6 +7,14 @@ String
 PunctuationString
 Punctuation
 Whitespace
+Comment
+Comment
+NewLine
 VariableName
 Punctuation
+Function
+Punctuation
+Whitespace
+Comment
+Comment
 NewLine

@@ -1,11 +1,11 @@
 import asyncio
-from playwright.async_api import async_playwright
+from playwright.async_api import async_playwright, Playwright
 
 path_to_extension = "./my-extension"
 user_data_dir = "/tmp/test-user-data-dir"
 
 
-async def run(playwright):
+async def run(playwright: Playwright):
     context = await playwright.chromium.launch_persistent_context(
         user_data_dir,
         headless=False,

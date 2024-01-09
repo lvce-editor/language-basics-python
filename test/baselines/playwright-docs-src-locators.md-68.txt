@@ -10,4 +10,12 @@ PunctuationString
 Punctuation
 Function
 Punctuation
+VariableName
+Punctuation
+PunctuationString
+String
+PunctuationString
+Punctuation
+Function
+Punctuation
 NewLine

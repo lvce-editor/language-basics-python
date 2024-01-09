@@ -1,5 +1,7 @@
 Keyword
 Whitespace
+Function
+Punctuation
 VariableName
 Punctuation
 Function
@@ -9,5 +11,19 @@ String
 PunctuationString
 Punctuation
 Function
+Punctuation
+PunctuationString
+String
+PunctuationString
+Punctuation
+Whitespace
+PunctuationString
+String
+PunctuationString
+Punctuation
+Whitespace
+PunctuationString
+String
+PunctuationString
 Punctuation
 NewLine

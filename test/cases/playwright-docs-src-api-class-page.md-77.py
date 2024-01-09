@@ -1,8 +1,10 @@
-with page.expect_request("http://example.com/resource") as first:
-    page.get_by_text("trigger request").click()
-first_request = first.value
+with page.expect_response("https://example.com/resource") as response_info:
+    page.get_by_text("trigger response").click()
+response = response_info.value
+return response.ok
 
 # or with a lambda
-with page.expect_request(lambda request: request.url == "http://example.com" and request.method == "get") as second:
-    page.get_by_text("trigger request").click()
-second_request = second.value
+with page.expect_response(lambda response: response.url == "https://example.com" and response.status == 200) as response_info:
+    page.get_by_text("trigger response").click()
+response = response_info.value
+return response.ok

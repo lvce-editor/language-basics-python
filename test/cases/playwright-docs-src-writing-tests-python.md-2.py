@@ -1,6 +1,5 @@
-from playwright.sync_api import expect
-
+# Create a locator.
 get_started = page.get_by_role("link", name="Get started")
 
-expect(get_started).to_have_attribute("href", "/docs/installation")
+# Click it.
 get_started.click()

@@ -12,8 +12,6 @@ NewLine
 Comment
 Comment
 NewLine
-Keyword
-Whitespace
 Function
 Punctuation
 VariableName
@@ -45,8 +43,6 @@ NewLine
 Comment
 Comment
 NewLine
-Keyword
-Whitespace
 Function
 Punctuation
 VariableName
@@ -78,8 +74,6 @@ NewLine
 Comment
 Comment
 NewLine
-Keyword
-Whitespace
 Function
 Punctuation
 VariableName
@@ -111,8 +105,6 @@ NewLine
 Comment
 Comment
 NewLine
-Keyword
-Whitespace
 Function
 Punctuation
 VariableName

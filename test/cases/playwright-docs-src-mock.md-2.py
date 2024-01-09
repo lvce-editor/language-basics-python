@@ -1,6 +1,6 @@
 async def test_gets_the_json_from_api_and_adds_a_new_fruit(page: Page):
     async def handle(route: Route):
-        response = await route.fulfill()
+        response = await route.fetch()
         json = await response.json()
         json.append({ "name": "Playwright", "id": 100})
         # Fulfill using the original response, while patching the response body

@@ -4,3 +4,6 @@ def records_or_updates_the_har_file(page: Page):
 
     # Go to the page
     page.goto("https://demo.playwright.dev/api-mocking")
+
+    # Assert that the fruit is visible
+    expect(page.get_by_text("Strawberry")).to_be_visible()

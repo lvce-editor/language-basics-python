@@ -1,1 +1,1 @@
-await page.get_by_role("listitem").filter(has_text="orange").click()
+await page.get_by_text("orange").click()

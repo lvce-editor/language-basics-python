@@ -1,1 +1,1 @@
-await page.get_by_role("button").count()
+await page.get_by_role("button").click()

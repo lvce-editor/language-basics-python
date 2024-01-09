@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 
 const REPO = 'https://github.com/microsoft/playwright'
-const COMMIT = '7e310f79af8732d40e41042d437623f632610509'
+const COMMIT = '2ddf3a45f9de57092da62d280ac47ee913e723a1'
 
 const getTestName = (line) => {
   return (

@@ -1,1 +1,1 @@
-page.get_by_role("checkbox").set_checked(True)
+page.get_by_role("link").screenshot(animations="disabled", path="link.png")

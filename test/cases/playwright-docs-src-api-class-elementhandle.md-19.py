@@ -1,2 +1,4 @@
-element_handle.type("hello") # types instantly
-element_handle.type("world", delay=100) # types slower, like a user
+page.set_content("<div><span></span></div>")
+div = page.query_selector("div")
+# waiting for the "span" selector relative to the div.
+span = div.wait_for_selector("span", state="attached")

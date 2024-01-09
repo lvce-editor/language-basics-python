@@ -40,6 +40,12 @@ VariableName
 Punctuation
 VariableName
 NewLine
+KeywordReturn
+Whitespace
+VariableName
+Punctuation
+VariableName
+NewLine
 NewLine
 Comment
 Comment
@@ -75,9 +81,7 @@ VariableName
 Whitespace
 Punctuation
 Whitespace
-PunctuationString
-String
-PunctuationString
+Numeric
 Punctuation
 Whitespace
 KeywordControl
@@ -104,6 +108,12 @@ Whitespace
 Punctuation
 Whitespace
 Keyword
+Whitespace
+VariableName
+Punctuation
+VariableName
+NewLine
+KeywordReturn
 Whitespace
 VariableName
 Punctuation

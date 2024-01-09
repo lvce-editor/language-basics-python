@@ -29,9 +29,6 @@ Punctuation
 Function
 Punctuation
 NewLine
-Comment
-Comment
-NewLine
 VariableName
 Whitespace
 Punctuation
@@ -40,15 +37,6 @@ VariableName
 Punctuation
 VariableName
 NewLine
-Comment
-Comment
-NewLine
-Function
-Punctuation
-VariableName
-Punctuation
-Function
-Punctuation
 NewLine
 Comment
 Comment
@@ -60,5 +48,11 @@ Punctuation
 PunctuationString
 String
 PunctuationString
+Whitespace
+Punctuation
+Whitespace
+VariableName
+Punctuation
+VariableName
 Punctuation
 NewLine

@@ -1,7 +1,7 @@
 import asyncio
-from playwright.async_api import async_playwright
+from playwright.async_api import async_playwright, Playwright
 
-async def run(playwright):
+async def run(playwright: Playwright):
     webkit = playwright.webkit
     iphone = playwright.devices["iPhone 6"]
     browser = await webkit.launch()

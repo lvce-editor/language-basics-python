@@ -8,13 +8,6 @@ Function
 Punctuation
 VariableName
 Punctuation
-PunctuationString
-String
-PunctuationString
-Punctuation
-Whitespace
-VariableName
-Punctuation
 LanguageConstant
 Punctuation
 Whitespace

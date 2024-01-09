@@ -4,6 +4,7 @@ context = browser.new_context()
 # Start tracing before creating / navigating a page.
 context.tracing.start(screenshots=True, snapshots=True, sources=True)
 
+page = context.new_page()
 page.goto("https://playwright.dev")
 
 # Stop tracing and export it into a zip archive.

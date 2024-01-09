@@ -1,3 +1,3 @@
-context = browser.new_context(record_har_path="github.har.zip")
+context = await browser.new_context(record_har_path="github.har.zip")
 # ... do stuff ...
-context.close()
+await context.close()

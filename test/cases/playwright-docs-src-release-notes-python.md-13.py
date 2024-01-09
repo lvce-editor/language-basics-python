@@ -1,2 +1,2 @@
-order_sent = page.locator("#order-sent")
-order_sent.wait_for()
+locator = page.frame_locator("my-frame").locator("text=Submit")
+locator.click()
