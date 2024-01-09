@@ -1,0 +1,7 @@
+a = Ur'S T R'
+a = UR'S T R'
+a = uB'S T R'
+a = Ru'S T R'
+a = RU'S T R'
+a = bR'S T R'
+a = Rb'S T R'

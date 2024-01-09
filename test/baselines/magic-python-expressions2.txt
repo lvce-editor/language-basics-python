@@ -1,0 +1,14 @@
+VariableName
+Whitespace
+Text
+NewLine
+VariableName
+Whitespace
+Punctuation
+Whitespace
+VariableName
+NewLine
+VariableName
+Whitespace
+Text
+NewLine

@@ -1,0 +1,9 @@
+Keyword
+Whitespace
+Function
+Punctuation
+LanguageConstant
+Punctuation
+Whitespace
+LanguageConstant
+NewLine

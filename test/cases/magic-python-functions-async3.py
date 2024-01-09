@@ -1,0 +1,1 @@
+casync def foo(): pass

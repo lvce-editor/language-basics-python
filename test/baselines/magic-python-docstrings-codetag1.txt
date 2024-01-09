@@ -1,0 +1,15 @@
+Punctuation
+String
+Punctuation
+NewLine
+NewLine
+Keyword
+Whitespace
+Function
+Punctuation
+NewLine
+Whitespace
+Punctuation
+String
+Punctuation
+NewLine

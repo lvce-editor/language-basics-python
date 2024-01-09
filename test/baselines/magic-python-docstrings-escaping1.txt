@@ -1,0 +1,17 @@
+Punctuation
+String
+NewLine
+NewLine
+String
+NewLine
+String
+NewLine
+NewLine
+String
+NewLine
+String
+NewLine
+String
+NewLine
+Punctuation
+NewLine
