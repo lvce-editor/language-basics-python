@@ -1,8 +1,8 @@
 VariableName
 Punctuation
-VariableName
+Class
 NewLine
-VariableName
+Class
 Punctuation
 VariableName
 NewLine

@@ -45,6 +45,7 @@ export const TokenType = {
   KeywordControl: 956,
   Function: 957,
   KeywordOperator: 958,
+  ClassName: 994,
 }
 
 export const TokenMap = {
@@ -69,6 +70,7 @@ export const TokenMap = {
   [TokenType.KeywordControl]: 'KeywordControl',
   [TokenType.Function]: 'Function',
   [TokenType.KeywordOperator]: 'KeywordOperator',
+  [TokenType.ClassName]: 'Class',
 }
 
 const RE_WHITESPACE = /^\s+/
@@ -82,7 +84,7 @@ const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^'\\]+/
 const RE_STRING_TRIPLE_DOUBLE_QUOTE_CONTENT = /^.+(?=""")/
 const RE_LINE_COMMENT = /^#/
 const RE_KEYWORD =
-  /^(?:__debug__|Ellipsis|yield|with|while|try|true|True|return|raise|pass|or|NotImplemented|not|nonlocal|None|lambda|is|in|import|if|global|from|for|finally|False|false|except|else|elif|del|def|continue|class|break|await|async|assert|as|and)\b/
+  /^(?:__debug__|AttributeError|ConnectionAbortedError|PendingDeprecationWarning|ModuleNotFoundError|SystemExit|Warning|Exception|BaseException|Ellipsis|yield|with|while|try|true|True|return|raise|pass|or|NotImplemented|not|nonlocal|None|lambda|is|in|import|if|global|from|for|finally|False|false|except|else|elif|del|def|continue|class|break|await|async|assert|as|and)\b/
 const RE_VARIABLE_NAME = /^[_a-zA-Z][a-zA-Z\d_]*/
 const RE_NUMERIC =
   /^((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b/
@@ -127,7 +129,19 @@ export const tokenizeLine = (line, lineState) => {
             case 'True':
             case 'False':
             case 'None':
+            case 'NotImplemented':
+            case 'Ellipsis':
               token = TokenType.LanguageConstant
+              break
+            case 'AttributeError':
+            case 'ConnectionAbortedError':
+            case 'PendingDeprecationWarning':
+            case 'ModuleNotFoundError':
+            case 'SystemExit':
+            case 'Warning':
+            case 'Exception':
+            case 'BaseException':
+              token = TokenType.ClassName
               break
             case 'return':
               token = TokenType.KeywordReturn

@@ -20,5 +20,5 @@ VariableName
 NewLine
 VariableName
 Punctuation
-VariableName
+Class
 NewLine
