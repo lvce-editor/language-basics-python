@@ -27,7 +27,7 @@ Comment
 NewLine
 KeywordControl
 Whitespace
-VariableName
+Class
 Whitespace
 KeywordControl
 Whitespace

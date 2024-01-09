@@ -12,7 +12,7 @@ VariableName
 NewLine
 KeywordControl
 Whitespace
-Function
+Class
 Punctuation
 PunctuationString
 String

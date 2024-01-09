@@ -20,7 +20,7 @@ NewLine
 NewLine
 KeywordControl
 Whitespace
-VariableName
+Class
 Whitespace
 KeywordImport
 Whitespace
