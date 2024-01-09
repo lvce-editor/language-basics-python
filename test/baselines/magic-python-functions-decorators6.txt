@@ -1,3 +1,4 @@
+Punctuation
 VariableName
 Punctuation
 Whitespace
@@ -29,6 +30,7 @@ Punctuation
 Numeric
 Punctuation
 NewLine
+Punctuation
 VariableName
 Punctuation
 Keyword
@@ -36,6 +38,7 @@ Punctuation
 VariableName
 Punctuation
 NewLine
+Punctuation
 VariableName
 Punctuation
 VariableName

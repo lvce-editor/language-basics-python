@@ -1,6 +1,7 @@
 Comment
 Comment
 NewLine
+Punctuation
 VariableName
 Punctuation
 Function
