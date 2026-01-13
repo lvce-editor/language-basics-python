@@ -5,11 +5,17 @@
   "languages": [
     {
       "id": "python",
-      "extensions": [".py"],
-      "fileNames": ["SCsub", "SConstruct"],
+      "extensions": [
+        ".py"
+      ],
+      "fileNames": [
+        "SCsub",
+        "SConstruct"
+      ],
       "configuration": "./languageConfiguration.json",
       "tokenize": "src/tokenizePython.js",
       "firstLine": "^#!\\s*/?.*\\bpython[0-9.-]*\\b"
     }
-  ]
+  ],
+  "repository": "https://github.com/lvce-editor/language-basics-python"
 }
